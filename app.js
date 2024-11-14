@@ -11,6 +11,7 @@ function clockFunction() {
 
     function dualFunction(dual){
        return dual < 10 ? '0' + dual : dual
+
     }
 
     
@@ -18,7 +19,7 @@ function clockFunction() {
     getHour % 12 === 0 ? 12 : getHour % 12;
 
 
-    viewHour.innerHTML = dualFunction(getHour);
+    viewHour.innerHTML = dualFunction(getHour > 12 ? getHour - 12 : getHour);
     viewMinute.innerHTML = dualFunction(getMinutes);
     viewSeconds.innerHTML = dualFunction(getSeconds);
     ampm.innerHTML = period;
